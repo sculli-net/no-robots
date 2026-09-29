@@ -1,6 +1,6 @@
 {
   "name": "no-robots-next",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Quickly initialise robots.txt rules for new next.js projects.",
   "repository": { "type": "git", "url": "https://github.com/sculli-net/no-robots" },
   "scripts": {
