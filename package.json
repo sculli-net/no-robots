@@ -1,0 +1,41 @@
+{
+  "name": "no-robots-next",
+  "version": "0.0.2",
+  "description": "Quickly initialise robots.txt rules for new next.js projects.",
+  "repository": { "type": "git", "url": "https://github.com/sculli-net/no-robots" },
+  "scripts": {
+    "build": "esbuild edit/cli.ts --bundle --platform=node --format=esm --target=node18 --packages=external --outfile=dist/cli.js --banner:js=\"#!/usr/bin/env node\"",
+    "prepack": "pnpm build",
+    "start": "node dist/cli.js",
+    "dev": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["nextjs", "robots", "preview", "seo", "cli"],
+  "author": "Matt Scullino <https://github.com/sculli-net>",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.5.2",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/prompts": "^2.4.9",
+    "esbuild": "0.28.2",
+    "tsx": "^4.23.13"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2",
+    "ts-morph": "^28.0.0"
+  },
+  "bin": {
+    "no-robots": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ]
+}
